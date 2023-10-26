@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
   <head>
-    <title>Buy cool new product</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PPCP Standard</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/minstyle.io@2.0.1/dist/css/minstyle.io.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
   </head>
   <body>
-    <section>
-      
-      <div class="product">
-        <img src="https://i.imgur.com/EHyR2nP.png" alt="The cover of Stubborn Attachments" />
-        <div class="description">
-          <h3>Stubborn Attachments</h3>
-          <h5>$20.00</h5>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+          <h2 class="ms-text-center">ai-generated NFT Bored Ape</h2>
+          <div class="ms-text-center pb-2">
+            <div class="ms-label ms-large ms-action2 ms-light">$100.00 USD</div>
+          </div>
+          <div id="alerts" class="ms-text-center"></div>
+          <div id="loading" class="spinner-container ms-div-center">
+            <div class="spinner"></div>
+          </div>
+          <div id="content" class="hide">
+            <div class="ms-card ms-fill">
+              <div class="ms-card-content">
+                <img src="https://cdn.discordapp.com/attachments/1060825015681028127/1076385063903694908/rauljr7_3d_e83fed6a-69aa-4a6a-b0ec-928edd57aecf.png" style="width:400px">
+              </div>
+            </div>
+            <div id="payment_options"></div>
+          </div>
         </div>
+        <div class="col-sm"></div>
       </div>
-      <form action="/create-checkout-session" method="POST">
-        <button type="submit" id="checkout-button">Checkout</button>
-      </form>
-
-      <div class="IntegrationBuilderDemo--view Box-root Flex-flex Flex-alignItems--center Flex-direction--column Flex-justifyContent--center"><div class="CheckoutDemo Box-root Flex-flex Flex-alignItems--center" style="min-height: 170px;"><section><div class="product Box-root"><img src="https://b.stripecdn.com/docs-statics-srv/assets/e9d184fcb37d32f21df2171a070f5fbc.png" alt="The cover of Stubborn Attachments"><div class="description Box-root"><h3>Stubborn Attachments</h3><h5>$20.00</h5></div></div><button type="button" class="CheckoutDemo--button">Checkout</button></section></div></div>
-     Ver 3
-    </section>
+    </div>
   </body>
 </html>

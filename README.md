@@ -1,19 +1,41 @@
-# Accept a Payment with Stripe Checkout
+![PayPal Developer Cover](https://github.com/paypaldev/.github/blob/main/pp-cover.png)
 
-Stripe Checkout is the fastest way to get started with payments. Included are some basic build and run scripts you can use to start up the application.
+<div align="center">
+  <a href="https://twitter.com/paypaldev" target="_blank">
+    <img alt="Twitter: PayPal Developer" src="https://img.shields.io/twitter/follow/paypaldev?style=social" />
+  </a>
+  <br />
+  <a href="https://twitter.com/paypaldev" target="_blank">Twitter</a>
+    <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span>
+  <a href="https://www.paypal.com/us/home" target="_blank">PayPal</a>
+    <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span>
+  <a href="https://developer.paypal.com/home" target="_blank">Docs</a>
+    <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span>
+  <a href="https://github.com/paypaldev" target="_blank">Code Samples</a>
+    <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span>
+  <a href="https://dev.to/paypaldeveloper" target="_blank">Blog</a>
+  <br />
+  <hr />
+</div>
 
-## Running the sample
+# PayPal Standard Checkout Tutorial
 
-1. Build the server
+This is the example code from the YouTube video, [How to Integrate PayPal Standard Checkout](https://youtu.be/MBfJEUGNNs0)
 
-~~~
-mvn package
-~~~
+## Getting Started
 
-2. Run the server
+Grab your PayPal CLIENT ID and SECRET and fill them in the following files:
 
-~~~
-java -cp target/sample-jar-with-dependencies.jar com.stripe.sample.Server
-~~~
+- .env
+- [script.js line 25](https://github.com/rauljr7/ppcp_standard_tutorial/blob/main/script.js#L25)
+- If you want to use a port other than 3000, make sure you also adjust that in the main javascript file [here](https://github.com/rauljr7/ppcp_standard_tutorial/blob/main/script.js#L50) and [here](https://github.com/rauljr7/ppcp_standard_tutorial/blob/main/script.js#L60)
 
-3. Go to [http://localhost:4242/checkout.html](http://localhost:4242/checkout.html)
+Once you have configured your credentials, you can run `npm i` to install the packages and start your app with `node index`
+
+## PayPal Developer Community
+
+The PayPal Developer community helps you build your career, while also improving PayPal products and the developer experience. You’ll be able to contribute code and documentation, meet new people and learn from the open source community.
+
+- Website: [developer.paypal.com](https://developer.paypal.com)
+- Twitter: [@paypaldev](https://twitter.com/paypaldev)
+- Github: [@paypal](https://github.com/paypal)
