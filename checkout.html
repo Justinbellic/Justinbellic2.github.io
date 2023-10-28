@@ -78,7 +78,9 @@
       width: 200%;
     }
 
-    
+    img {
+      border-radius: 20px;
+    }
   </style>
 
   <link rel="stylesheet" type="text/css"
@@ -244,8 +246,8 @@
       <div class="row">
         <div class="col-lg"></div>
         <div class="col-lg">
-          
-          
+
+
           <div id="alerts" class="ms-text-center"></div>
           <div id="loading" class="spinner-container ms-div-center">
             <div class="spinner"></div>
@@ -257,7 +259,9 @@
 
               <br>
 
-              <h2 style="font-size: 30px;">Item 1:</h2>
+              <!-- <button onclick="runz()"> CLICK ME </button> -->
+
+              <!-- <h2 style="font-size: 30px;">Item 1:</h2>
               <img src="./img/a" style="width: 100%;"> 
               <h2 style="font-size: 20px;">Wild Wild Ticket 1 Pax (Adult)</h2>
               <h2 style="font-size: 25px;">Price:</h2>
@@ -274,7 +278,11 @@
               <br>
 
               <h2 style="font-size: 25px;">Total:</h2>
-              <h2 style="font-size: 30px;">$25</h2>
+              <h2 style="font-size: 30px;">$25</h2> -->
+
+              <ul id="cart"></ul>
+
+
 
             </div>
             <div id="payment_options"></div>
@@ -303,6 +311,87 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="github.js"></script>
+
+  <script>
+
+    const
+      storedCart =
+        JSON
+          .
+          parse
+          (
+            localStorage
+              .
+              getItem
+              (
+                "cart"
+              ));
+
+
+    if
+      (storedCart) {
+
+      // The cart is not empty
+
+      cart = storedCart;
+    }
+
+
+
+
+    function runz() {
+      var name = window.localStorage.getItem("cart");
+      console.log('POOT')
+      console.log(name)
+      console.log(storedCart)
+    }
+
+    document
+      .
+      addEventListener
+      (
+        "DOMContentLoaded"
+        ,
+        function
+          (
+        ) {
+
+          // Your JavaScript code goes here
+          // console.log("BOOM")
+
+          let cartList = document.getElementById("cart");
+          cartList.innerHTML = "";
+          var totalPrice = 0;
+
+          for (let item of storedCart) {
+            let img = document.createElement('img');
+            img.src = item.imgurl;
+            cartList.appendChild(img);
+
+
+            let listItem = document.createElement("li");
+            listItem.innerText = `${item.name} - $${item.price.toFixed(2)} - ${item.type}`;
+            cartList.appendChild(listItem);
+            totalPrice += item.price;
+
+            cartList.appendChild(document.createElement("br"));
+          }
+
+          let totalItem2 = document.createElement("br");
+          cartList.appendChild(totalItem2);
+
+          cartList.appendChild(document.createElement("br"));
+
+          let totalItem = document.createElement("li");
+          totalItem.innerText = `Total: $${totalPrice.toFixed(2)}`;
+          cartList.appendChild(totalItem);
+          // window.localStorage.setItem("cart", JSON.stringify(cart));
+
+
+          // This code will run when the page is fully loaded.
+
+        });
+  </script>
 
 </body>
 
